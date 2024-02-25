@@ -112,8 +112,8 @@ var file_bq_table_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptor.MessageOptions)(nil),
 		ExtensionType: (*BigQueryMessageOptions)(nil),
 		Field:         1021,
-		Name:          "gen_bq_schema.bigquery_opts",
-		Tag:           "bytes,1021,opt,name=bigquery_opts",
+		Name:          "bq_schema.options",
+		Tag:           "bytes,1021,opt,name=options",
 		Filename:      "bq_table.proto",
 	},
 }
@@ -125,7 +125,7 @@ var (
 	// The field number is a globally unique id for this option, assigned by
 	// protobuf-global-extension-registry@google.com
 	//
-	// optional gen_bq_schema.BigQueryMessageOptions bigquery_opts = 1021;
+	// optional bq_schema.fieldMessageOptions options = 1021;
 	E_BigqueryOpts = &file_bq_table_proto_extTypes[0]
 )
 
@@ -169,12 +169,12 @@ func file_bq_table_proto_rawDescGZIP() []byte {
 
 var file_bq_table_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_bq_table_proto_goTypes = []interface{}{
-	(*BigQueryMessageOptions)(nil),    // 0: gen_bq_schema.BigQueryMessageOptions
+	(*BigQueryMessageOptions)(nil),    // 0: bq_schema.fieldMessageOptions
 	(*descriptor.MessageOptions)(nil), // 1: google.protobuf.MessageOptions
 }
 var file_bq_table_proto_depIdxs = []int32{
-	1, // 0: gen_bq_schema.bigquery_opts:extendee -> google.protobuf.MessageOptions
-	0, // 1: gen_bq_schema.bigquery_opts:type_name -> gen_bq_schema.BigQueryMessageOptions
+	1, // 0: bq_schema.options:extendee -> google.protobuf.MessageOptions
+	0, // 1: bq_schema.options:type_name -> bq_schema.fieldMessageOptions
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	1, // [1:2] is the sub-list for extension type_name

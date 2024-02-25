@@ -353,7 +353,7 @@ func convertFile(file *descriptor.FileDescriptorProto) ([]*plugin.CodeGeneratorR
 
 // getBigqueryMessageOptions returns the bigquery options for the given message.
 // If an error is encountered, it is returned instead. If no error occurs, but
-// the message has no gen_bq_schema.bigquery_opts option, this function returns
+// the message has no bq_schema.options option, this function returns
 // nil, nil.
 func getBigqueryMessageOptions(msg *descriptor.DescriptorProto) (*protos.BigQueryMessageOptions, error) {
 	options := msg.GetOptions()

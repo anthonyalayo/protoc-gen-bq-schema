@@ -35,7 +35,7 @@ import "bq_table.proto";
 import "bq_field.proto";
 
 message Bar {
-  option (gen_bq_schema.bigquery_opts).table_name = "bar_table";
+  option (bq_schema.options).table_name = "bar_table";
 
   message Nested {
     repeated int32 a = 1;
@@ -50,11 +50,11 @@ message Bar {
   // Repeated c string
   repeated string c = 3;
 
-  optional bool d = 4 [(gen_bq_schema.bigquery).ignore = true];
+  optional bool d = 4 [(bq_schema.field).ignore = true];
 
   // TIMESTAMP (uint64 in proto) - required in BigQuery
   optional uint64 e = 5 [
-    (gen_bq_schema.bigquery) = {
+    (bq_schema.field) = {
       require: true
       type_override: 'TIMESTAMP'
     }
@@ -67,7 +67,7 @@ message Baz {
 ```
 
 `protoc --bq-schema_out=. foo.proto` will generate a file named `foo/bar_table.schema`.
-The message `foo.Baz` is ignored because it doesn't have option `gen_bq_schema.bigquery_opts`.
+The message `foo.Baz` is ignored because it doesn't have option `bq_schema.options`.
 
 `protoc --bq-schema_out=. --bq-schema_opt=single-message single_message.proto` will generate a file named `foo/single_message.schema`.
 The message `foo.Baz` is also ignored because it is not the first message in the file.
@@ -86,19 +86,19 @@ import "bq_table.proto";
 import "bq_field.proto";
 
 message TestTable{
-    option (gen_bq_schema.bigquery_opts).table_name = "test_table";
+    option (bq_schema.options).table_name = "test_table";
 
     int32 a = 1 [
-        (gen_bq_schema.bigquery) = {
+        (bq_schema.field) = {
           require: true
           policy_tags : "private"
         }
       ];
 
-    string b = 2 [(gen_bq_schema.bigquery).policy_tags="public"];
+    string b = 2 [(bq_schema.field).policy_tags="public"];
 
     message Nested {
-        int32 a = 1 [(gen_bq_schema.bigquery) = {
+        int32 a = 1 [(bq_schema.field) = {
             require: true
             policy_tags : "private"
             }
@@ -107,7 +107,7 @@ message TestTable{
         string b = 2;
     }
 
-    repeated Nested nested = 3 [(gen_bq_schema.bigquery).require = true];
+    repeated Nested nested = 3 [(bq_schema.field).require = true];
 
     message EmptyMessage {}
 

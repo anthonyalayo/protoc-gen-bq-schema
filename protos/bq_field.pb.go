@@ -139,7 +139,7 @@ var file_bq_field_proto_extTypes = []protoimpl.ExtensionInfo{
 		ExtendedType:  (*descriptor.FieldOptions)(nil),
 		ExtensionType: (*BigQueryFieldOptions)(nil),
 		Field:         1021,
-		Name:          "gen_bq_schema.bigquery",
+		Name:          "bq_schema.field",
 		Tag:           "bytes,1021,opt,name=bigquery",
 		Filename:      "bq_field.proto",
 	},
@@ -149,7 +149,7 @@ var file_bq_field_proto_extTypes = []protoimpl.ExtensionInfo{
 var (
 	// BigQuery field schema generation options.
 	//
-	// optional gen_bq_schema.BigQueryFieldOptions bigquery = 1021;
+	// optional bq_schema.fieldFieldOptions bigquery = 1021;
 	E_Bigquery = &file_bq_field_proto_extTypes[0]
 )
 
@@ -196,12 +196,12 @@ func file_bq_field_proto_rawDescGZIP() []byte {
 
 var file_bq_field_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_bq_field_proto_goTypes = []interface{}{
-	(*BigQueryFieldOptions)(nil),    // 0: gen_bq_schema.BigQueryFieldOptions
+	(*BigQueryFieldOptions)(nil),    // 0: bq_schema.fieldFieldOptions
 	(*descriptor.FieldOptions)(nil), // 1: google.protobuf.FieldOptions
 }
 var file_bq_field_proto_depIdxs = []int32{
-	1, // 0: gen_bq_schema.bigquery:extendee -> google.protobuf.FieldOptions
-	0, // 1: gen_bq_schema.bigquery:type_name -> gen_bq_schema.BigQueryFieldOptions
+	1, // 0: bq_schema.field:extendee -> google.protobuf.FieldOptions
+	0, // 1: bq_schema.field:type_name -> bq_schema.fieldFieldOptions
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	1, // [1:2] is the sub-list for extension type_name

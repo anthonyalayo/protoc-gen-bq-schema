@@ -11,7 +11,7 @@ import "google/protobuf/timestamp.proto";
 import "common.proto";
 
 message Bar {
-  option (gen_bq_schema.bigquery_opts).table_name = "bar_proto3_table";
+  option (bq_schema.options).table_name = "bar_proto3_table";
 
   message Nested {
     repeated int32 a = 1;
@@ -26,11 +26,11 @@ message Bar {
   // Repeated c string
   repeated string c = 3;
 
-  bool d = 4 [(gen_bq_schema.bigquery).ignore = true];
+  bool d = 4 [(bq_schema.field).ignore = true];
 
   // TIMESTAMP (uint64 in proto) - required in BigQuery
   uint64 e = 5 [
-    (gen_bq_schema.bigquery) = {
+    (bq_schema.field) = {
       require: true
       type_override: 'TIMESTAMP'
     }

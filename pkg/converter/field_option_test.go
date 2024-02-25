@@ -38,13 +38,13 @@ func TestIgnore(t *testing.T) {
 					type: TYPE_INT32
 					label: LABEL_OPTIONAL
 					options <
-						[gen_bq_schema.bigquery] <
+						[bq_schema.field] <
 							ignore: true
 						>
 					>
 				>
 				options <
-					[gen_bq_schema.bigquery_opts]: <
+					[bq_schema.options]: <
 						table_name: "foo_table"
 					>
 				>
@@ -71,13 +71,13 @@ func TestRequire(t *testing.T) {
 					type: TYPE_INT32
 					label: LABEL_OPTIONAL
 					options <
-						[gen_bq_schema.bigquery] <
+						[bq_schema.field] <
 							require: true
 						>
 					>
 				>
 				options <
-					[gen_bq_schema.bigquery_opts]: <
+					[bq_schema.options]: <
 						table_name: "foo_table"
 					>
 				>
@@ -104,13 +104,13 @@ func TestTypeOverride(t *testing.T) {
 					type: TYPE_INT32
 					label: LABEL_OPTIONAL
 					options <
-						[gen_bq_schema.bigquery] <
+						[bq_schema.field] <
 							type_override: "FLOAT"
 						>
 					>
 				>
 				options <
-					[gen_bq_schema.bigquery_opts]: <
+					[bq_schema.options]: <
 						table_name: "foo_table"
 					>
 				>
@@ -137,13 +137,13 @@ func TestDescription(t *testing.T) {
 					type: TYPE_INT32
 					label: LABEL_OPTIONAL
 					options <
-						[gen_bq_schema.bigquery] <
+						[bq_schema.field] <
 							description: "bar"
 						>
 					>
 				>
 				options <
-					[gen_bq_schema.bigquery_opts]: <
+					[bq_schema.options]: <
 						table_name: "foo_table"
 					>
 				>
@@ -170,13 +170,13 @@ func TestNameOverride(t *testing.T) {
 					type: TYPE_INT32
 					label: LABEL_OPTIONAL
 					options <
-						[gen_bq_schema.bigquery] <
+						[bq_schema.field] <
 							name: "Integer1"
 						>
 					>
 				>
 				options <
-					[gen_bq_schema.bigquery_opts]: <
+					[bq_schema.options]: <
 						table_name: "foo_table"
 					>
 				>
@@ -211,7 +211,7 @@ func TestJsonNames(t *testing.T) {
 					label: LABEL_OPTIONAL
 				>
 				options <
-					[gen_bq_schema.bigquery_opts]: <
+					[bq_schema.options]: <
 						table_name: "foo_table"
 						use_json_names: true
 					>
@@ -247,13 +247,13 @@ func TestPolicyTags(t *testing.T) {
 					type: TYPE_INT32
 					label: LABEL_OPTIONAL
 					options <
-						[gen_bq_schema.bigquery]: <
+						[bq_schema.field]: <
 							policy_tags: "pii"
 						>
 					>
 				>
 				options <
-					[gen_bq_schema.bigquery_opts]: <
+					[bq_schema.options]: <
 						table_name: "foo_table"
 						use_json_names: true
 					>
