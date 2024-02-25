@@ -45,7 +45,7 @@ func TestIgnore(t *testing.T) {
 				>
 				options <
 					[bq_schema.options]: <
-						table_name: "foo_table"
+						file_name: "foo_table"
 					>
 				>
 			>
@@ -78,7 +78,7 @@ func TestRequire(t *testing.T) {
 				>
 				options <
 					[bq_schema.options]: <
-						table_name: "foo_table"
+						file_name: "foo_table"
 					>
 				>
 			>
@@ -111,7 +111,7 @@ func TestTypeOverride(t *testing.T) {
 				>
 				options <
 					[bq_schema.options]: <
-						table_name: "foo_table"
+						file_name: "foo_table"
 					>
 				>
 			>
@@ -144,7 +144,7 @@ func TestDescription(t *testing.T) {
 				>
 				options <
 					[bq_schema.options]: <
-						table_name: "foo_table"
+						file_name: "foo_table"
 					>
 				>
 			>
@@ -177,7 +177,7 @@ func TestNameOverride(t *testing.T) {
 				>
 				options <
 					[bq_schema.options]: <
-						table_name: "foo_table"
+						file_name: "foo_table"
 					>
 				>
 			>
@@ -212,7 +212,7 @@ func TestJsonNames(t *testing.T) {
 				>
 				options <
 					[bq_schema.options]: <
-						table_name: "foo_table"
+						file_name: "foo_table"
 						use_json_names: true
 					>
 				>
@@ -254,7 +254,7 @@ func TestPolicyTags(t *testing.T) {
 				>
 				options <
 					[bq_schema.options]: <
-						table_name: "foo_table"
+						file_name: "foo_table"
 						use_json_names: true
 					>
 				>

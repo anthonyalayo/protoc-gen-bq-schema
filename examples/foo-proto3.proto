@@ -11,7 +11,7 @@ import "google/protobuf/timestamp.proto";
 import "common.proto";
 
 message Bar {
-  option (bq_schema.options).table_name = "bar_proto3_table";
+  option (bq_schema.options).file_name = "bar_proto3_table";
 
   message Nested {
     repeated int32 a = 1;

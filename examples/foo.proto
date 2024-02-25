@@ -7,7 +7,7 @@ import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 
 message Bar {
-  option (bq_schema.options).table_name = "bar_table";
+  option (bq_schema.options).file_name = "bar_table";
 
   message Nested {
     repeated int32 a = 1;

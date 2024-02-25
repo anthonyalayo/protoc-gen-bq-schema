@@ -4,7 +4,7 @@ import "bq_table.proto";
 import "bq_field.proto";
 
 message TestTable{
-    option (bq_schema.options).table_name = "test_table";
+    option (bq_schema.options).file_name = "test_table";
 
     int32 a = 1 [
         (bq_schema.field) = {

@@ -17,7 +17,7 @@ GOPROXY=direct go install github.com/anthonyalayo/protoc-gen-bq-schema@latest
 `protoc` and `protoc-gen-bq-schema` commands must be found in $PATH.
 
 The generated JSON schema files are suffixed with `.schema` and their base names are named
-after their package names and `bq_table_name` options.
+after their package names and `bq_file_name` options.
 
 If you do not already have the standard google protobuf libraries in your `proto_path`, you'll need to specify them directly on the command line (and potentially need to copy `bq_schema.proto` into a proto_path directory as well), like this:
 
@@ -35,7 +35,7 @@ import "bq_table.proto";
 import "bq_field.proto";
 
 message Bar {
-  option (bq_schema.options).table_name = "bar_table";
+  option (bq_schema.options).file_name = "bar_table";
 
   message Nested {
     repeated int32 a = 1;
@@ -86,7 +86,7 @@ import "bq_table.proto";
 import "bq_field.proto";
 
 message TestTable{
-    option (bq_schema.options).table_name = "test_table";
+    option (bq_schema.options).file_name = "test_table";
 
     int32 a = 1 [
         (bq_schema.field) = {
