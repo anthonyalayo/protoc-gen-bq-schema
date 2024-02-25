@@ -1,4 +1,4 @@
-module github.com/GoogleCloudPlatform/protoc-gen-bq-schema
+module github.com/anthonyalayo/protoc-gen-bq-schema
 
 go 1.15
 
