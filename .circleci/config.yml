@@ -5,7 +5,7 @@ jobs:
   build:
     docker:
       - image: circleci/golang:1.15
-    working_directory: /go/src/github.com/GoogleCloudPlatform/protoc-gen-bq-schema
+    working_directory: /go/src/github.com/anthonyalayo/protoc-gen-bq-schema
     steps:
       - checkout
       - run:
@@ -20,7 +20,7 @@ jobs:
   deploy:
     docker:
       - image: circleci/golang:1.15
-    working_directory: /go/src/github.com/GoogleCloudPlatform/protoc-gen-bq-schema
+    working_directory: /go/src/github.com/anthonyalayo/protoc-gen-bq-schema
     steps:
       - checkout
       - run:
